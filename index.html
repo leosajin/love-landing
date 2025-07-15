@@ -146,8 +146,12 @@
 P.S.: Я не мог уехать и оставить тебя без цветов))`;
 
     function showText() {
+      const btn = document.querySelector(".reveal-button");
       const el = document.getElementById("loveText");
+      btn.disabled = true;
+      btn.innerText = "❤️";
       el.classList.add("visible");
+      el.innerHTML = "";
       let i = 0;
       function typeChar() {
         if (i < text.length) {
